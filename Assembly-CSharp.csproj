@@ -64,7 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\PaddleController.cs" />
+    <Compile Include="Assets\Script\SwitchController.cs" />
+    <Compile Include="Assets\Script\BallController.cs" />
     <Compile Include="Assets\Script\BumperController.cs" />
+    <Compile Include="Assets\Script\LauncherController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
