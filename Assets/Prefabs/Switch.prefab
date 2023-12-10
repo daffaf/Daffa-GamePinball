@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6034021573704868079}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,4 +122,5 @@ MonoBehaviour:
   ball: {fileID: 0}
   offMaterial: {fileID: 2100000, guid: b0bb07dcc81dc1848b78075cecfb601b, type: 2}
   onMaterial: {fileID: 2100000, guid: 6b3e1b9f21cd1f046b960a81c6663994, type: 2}
-  isOn: 0
+  VFX: {fileID: 0}
+  audioManager: {fileID: 0}

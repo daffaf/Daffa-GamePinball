@@ -21,12 +21,14 @@ public class SwitchController : MonoBehaviour
 
     private Renderer rendererSwitch;
     private switchState state;
+
+    public VFXManager VFX;
+    public AudioManager audioManager;
     
     void Start()
     {
         rendererSwitch = GetComponent<Renderer>();
         Set(false);
-        
         StartCoroutine(blinkTimerStart(5));
     }
     
@@ -35,6 +37,7 @@ public class SwitchController : MonoBehaviour
         if(other == ball)
         {
             Toogle();
+            
         }
     }
     private void Set(bool active)
@@ -44,6 +47,7 @@ public class SwitchController : MonoBehaviour
         {
            state = switchState.on;
            rendererSwitch.material = onMaterial;
+           VFX.PlaySwitchVFX(transform.position);
            StopAllCoroutines();
         }else
         {
@@ -55,6 +59,7 @@ public class SwitchController : MonoBehaviour
     
     private void Toogle()
     {
+        audioManager.playSwitchSFX(transform.position);
         if(state == switchState.on)
         {
             Set(false);

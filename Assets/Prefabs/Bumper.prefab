@@ -122,9 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
-  multiplier: 3
+  multiplier: 1.1
   color: {r: 0.7283019, g: 0.14703451, b: 0.14703451, a: 0}
   rendererBumper: {fileID: 6365032766894059873}
+  audioManager: {fileID: 0}
+  VFX: {fileID: 0}
 --- !u!95 &427994825417213758
 Animator:
   serializedVersion: 5

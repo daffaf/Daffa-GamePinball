@@ -11,6 +11,9 @@ public class BumperController : MonoBehaviour
     public Renderer rendererBumper;
     private Animator anim;
 
+    public AudioManager audioManager;
+    public VFXManager VFX;
+
     void Start()
     {
         rendererBumper = GetComponent<Renderer>();
@@ -25,7 +28,8 @@ public class BumperController : MonoBehaviour
             bolaRig.velocity *= multiplier;
 
             anim.SetTrigger("bumperHit");
-            
+            audioManager.playSFX(collision.transform.position);
+            VFX.playVFX(collision.transform.position);
         }
     }
 }

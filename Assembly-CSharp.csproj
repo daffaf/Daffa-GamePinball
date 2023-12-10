@@ -63,10 +63,16 @@
     <Analyzer Include="E:\Unity\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\TriggerZoomoutController.cs" />
     <Compile Include="Assets\Script\PaddleController.cs" />
+    <Compile Include="Assets\Script\TriggerZoominController.cs" />
     <Compile Include="Assets\Script\SwitchController.cs" />
+    <Compile Include="Assets\Script\SfxAudioController.cs" />
     <Compile Include="Assets\Script\BallController.cs" />
     <Compile Include="Assets\Script\BumperController.cs" />
+    <Compile Include="Assets\Script\AudioManager.cs" />
+    <Compile Include="Assets\Script\CameraController.cs" />
+    <Compile Include="Assets\Script\VFXManager.cs" />
     <Compile Include="Assets\Script\LauncherController.cs" />
   </ItemGroup>
   <ItemGroup>
