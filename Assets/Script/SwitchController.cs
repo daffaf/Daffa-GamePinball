@@ -24,6 +24,8 @@ public class SwitchController : MonoBehaviour
 
     public VFXManager VFX;
     public AudioManager audioManager;
+    public ScoreManager scoreManager;
+    public float score;
     
     void Start()
     {
@@ -60,6 +62,7 @@ public class SwitchController : MonoBehaviour
     private void Toogle()
     {
         audioManager.playSwitchSFX(transform.position);
+        scoreManager.AddScore(score);
         if(state == switchState.on)
         {
             Set(false);

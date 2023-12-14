@@ -14,13 +14,17 @@ public class BumperController : MonoBehaviour
     public AudioManager audioManager;
     public VFXManager VFX;
 
+    public float score;
+    public ScoreManager scoreManager;
+
     void Start()
     {
         rendererBumper = GetComponent<Renderer>();
         rendererBumper.material.color = color;
         anim = GetComponent<Animator>();
+        
     }
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider == ball)
         {
@@ -30,6 +34,9 @@ public class BumperController : MonoBehaviour
             anim.SetTrigger("bumperHit");
             audioManager.playSFX(collision.transform.position);
             VFX.playVFX(collision.transform.position);
+            
+            scoreManager.AddScore(score);
+
         }
     }
 }
